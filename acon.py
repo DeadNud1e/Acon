@@ -11,17 +11,17 @@ class AconC(Layer):
 
     def build(self, input_shape):
         self.p1 = self.add_weight(name='p1',
-                                shape=[1],
+                                shape=(1, 1, 1, input_shape[-1]),
                                 initializer='random_normal',
                                 trainable=True)
 
         self.p2 = self.add_weight(name='p2',
-                                shape=[1],
+                                shape=(1, 1, 1, input_shape[-1]),
                                 initializer='random_normal',
                                 trainable=True)
 
         self.beta = self.add_weight(name='beta',
-                                shape=[1],
+                                shape=(1, 1, 1, input_shape[-1]),
                                 initializer='random_normal',
                                 trainable=True)
 
